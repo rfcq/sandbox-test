@@ -8,7 +8,7 @@
 				<option>Opção 3</option>
 			</select>
 			<br><br>
-			Opção selecionada: {{ selected }}
+			<span id="opt-selected"> Opção selecionada: {{ selected }} </span>
 		</div>
 </template>
 

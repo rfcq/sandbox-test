@@ -6,7 +6,7 @@
         <input type="radio" id="two" value="Dois" v-model="picked" />
         <label for="two">Opção 2</label>
         <br>
-        <span><p><b>Opção selecionada: {{ picked }}</b></p></span>
+        <span id="opt-selected">Opção selecionada: {{ picked }}</span>
     </div>
 </template>
 

@@ -7,7 +7,7 @@
         <input type="checkbox" id="mike" value="Mike" v-model="checkedNames" />
         <label for="mike">Mike</label>
         <br>
-        <span>Checked names: {{ checkedNames }} </span>
+        <span id="checked-names-list">Checked names: {{ checkedNames }} </span>
     </div>
 </template>
 

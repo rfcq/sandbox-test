@@ -1,6 +1,6 @@
 <template>
     <div id="v-model-basic" class="demo">
-      <input v-model="message" placeholder="Digite algo..." />
+      <input v-model="message" placeholder="Digite algo..." id="text-field" />
       <p>Mensagem: {{ message }}</p>
     </div>
 </template>

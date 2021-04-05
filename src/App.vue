@@ -26,7 +26,6 @@ export default {
           {
             header: 'Menu de Navegação',
             hiddenOnCollapse: true,
-          
           },
           {
             href: '/',
@@ -37,22 +36,37 @@ export default {
           {
             title: 'Objetos disponíveis',
             icon: 'fa fa-chart-area',
+            attributes: {
+              id: "object-group"
+            },
             child: [
               {
                 href: '/textfield',
-                title: 'Text Field'
+                title: 'Text Field',
+                attributes: {
+                  id: 'textfield'
+                }
               },
               {
                 href: '/combobox',
-                title: 'ComboBox'
+                title: 'ComboBox',
+                attributes: {
+                  id: 'combobox'
+                }
               },
               {
                 href: '/checkbox',
-                title: 'CheckBox'
+                title: 'CheckBox',
+                attributes: {
+                  id: 'checkbox'
+                }
               },
               {
                 href: '/radiobutton',
-                title: 'RadioButton'
+                title: 'RadioButton',
+                attributes: {
+                  id: 'radiobutton'
+                }
               }
             ]
           }

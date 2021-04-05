@@ -10,15 +10,55 @@
       <router-link to="/checkbox">CheckBox</router-link>
       <br>
       <router-link to="/radiobutton">Radio Button</router-link>
+      <sidebar-menu :menu="menu" @update:collapsed="onToggleCollapse" />
   </div>
   <router-view />
 </template>
 
 <script>
 
-
 export default {
-  
+  data() {
+      return {
+        
+        
+        menu: [
+          {
+            header: 'Menu de Navegação',
+            hiddenOnCollapse: true,
+          
+          },
+          {
+            href: '/',
+            title: 'Página Inicial',
+            icon: 'fa fa-user'
+          },
+          
+          {
+            title: 'Objetos disponíveis',
+            icon: 'fa fa-chart-area',
+            child: [
+              {
+                href: '/textfield',
+                title: 'Text Field'
+              },
+              {
+                href: '/combobox',
+                title: 'ComboBox'
+              },
+              {
+                href: '/checkbox',
+                title: 'CheckBox'
+              },
+              {
+                href: '/radiobutton',
+                title: 'RadioButton'
+              }
+            ]
+          }
+        ]
+      }
+    }
 }  
 </script>
 

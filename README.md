@@ -1,24 +1,19 @@
-# hello-world
+# Sandbox App
 
-## Project setup
+Aplicação desenvolvida para fins de estudo de testes automatizados
+
+## Requisitos
+```
+NodeJS LTS
+NPM
+```
+## Instalar dependências do projeto
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Subir aplicação
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

@@ -5,7 +5,4 @@ module.exports = defineConfig({
     lintOnSave: false
 })
 
-module.exports = {
-    publicPath: process.env.NODE_ENV === "production" ? "/sandbox-test/" : "/",
-  };
-  
+

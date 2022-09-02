@@ -12,8 +12,17 @@
 </template>
 
 <script>
+import { ref } from 'vue'
 
+export default {
+  setup() {
+    const checkedNames = ref('');
 
+    return {
+      checkedNames
+    }
+  }
+}
 
 </script>
 

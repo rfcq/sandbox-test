@@ -1,27 +1,34 @@
 <template>
-    <div id="v-model-multiple-checkboxes" class="demo">
-        <input type="checkbox" id="jack" value="Jack" v-model="checkedNames" />
-        <label for="jack">Jack</label>
-        <input type="checkbox" id="john" value="John" v-model="checkedNames" />
-        <label for="john">John</label>
-        <input type="checkbox" id="mike" value="Mike" v-model="checkedNames" />
-        <label for="mike">Mike</label>
-        <br>
-        <span id="checked-names-list">Checked names: {{ checkedNames }} </span>
+  <div>
+    <b-form-group label="Nomes:" v-slot="{ ariaDescribedby }">
+        <b-form-checkbox-group id="checkbox-group" v-model="selected" :aria-describedby="ariaDescribedby" name="names">
+          <b-form-checkbox value="jack">Jack</b-form-checkbox>
+          <b-form-checkbox value="john">John</b-form-checkbox>
+          <b-form-checkbox value="mike">Mike</b-form-checkbox>
+        </b-form-checkbox-group>
+        
+    </b-form-group>
+    <div>Selected: <strong>{{ names_checked }}</strong></div>
     </div>
 </template>
 
 <script>
-import { ref } from 'vue'
+
 
 export default {
-  setup() {
-    const checkedNames = ref('');
-
+  data() {
     return {
-      checkedNames
+      names_checked: [],
+      options: [
+        { text: 'Jack', value: 'jack'},
+        { text: 'John', value: 'john'},
+        { text: 'Mike', value: 'mike'}
+      ]
     }
   }
+  
+  
+  
 }
 
 </script>

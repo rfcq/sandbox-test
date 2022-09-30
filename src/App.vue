@@ -1,16 +1,7 @@
 <template>
-  
+  <h1>Sandbox</h1>
   <div id="nav">
-      <router-link to="/">Home</router-link> 
-      <br>
-      <router-link to="/textfield">TextField</router-link>
-      <br>
-      <router-link to="/combobox">ComboBox</router-link>
-      <br>
-      <router-link to="/checkbox">CheckBox</router-link>
-      <br>
-      <router-link to="/radiobutton">Radio Button</router-link>
-      <sidebar-menu :menu="menu" @update:collapsed="onToggleCollapse" />
+      <sidebar-menu :menu="menu"  @update:collapsed="onToggleCollapse"/>
   </div>
   <router-view />
 </template>
@@ -20,12 +11,10 @@
 export default {
   data() {
       return {
-        
-        
         menu: [
           {
             header: 'Menu de Navegação',
-            hiddenOnCollapse: true,
+            hiddenOnCollapse: true
           },
           {
             href: '/',
@@ -66,6 +55,20 @@ export default {
                 title: 'RadioButton',
                 attributes: {
                   id: 'radiobutton'
+                }
+              },
+              {
+                href: '/form',
+                title: 'Cadastro de Usuário',
+                attributes: {
+                  id: 'form-register'
+                }
+              },
+              {
+                href: '/about',
+                title: 'Sobre',
+                attributes: {
+                  id: 'about'
                 }
               }
             ]

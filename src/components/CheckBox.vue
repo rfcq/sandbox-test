@@ -1,35 +1,24 @@
 <template>
   <div>
-    <b-form-group label="Nomes:" v-slot="{ ariaDescribedby }">
-        <b-form-checkbox-group id="checkbox-group" v-model="selected" :aria-describedby="ariaDescribedby" name="names">
-          <b-form-checkbox value="jack">Jack</b-form-checkbox>
-          <b-form-checkbox value="john">John</b-form-checkbox>
-          <b-form-checkbox value="mike">Mike</b-form-checkbox>
-        </b-form-checkbox-group>
-        
-    </b-form-group>
-    <div>Selected: <strong>{{ names_checked }}</strong></div>
+    <input type="checkbox" value="Jack" name="Jack" v-model="checkedNames">
+    <label for="Jack">Jack</label>
+    <input type="checkbox" value="John" name="John" v-model="checkedNames">
+    <label for="John">John</label>
+    <input type="checkbox" value="Mike" name="Mike" v-model="checkedNames">
+    <label for="Mike">Mike</label>
+    <br>
+    <span>Selected: <strong>{{ checkedNames }}</strong></span>
     </div>
 </template>
 
 <script>
-
-
-export default {
-  data() {
-    return {
-      names_checked: [],
-      options: [
-        { text: 'Jack', value: 'jack'},
-        { text: 'John', value: 'john'},
-        { text: 'Mike', value: 'mike'}
-      ]
+  export default {
+    data() {
+      return {
+        checkedNames: []
+      }
     }
   }
-  
-  
-  
-}
 
 </script>
 

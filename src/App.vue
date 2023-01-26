@@ -21,9 +21,8 @@ export default {
             title: 'Página Inicial',
             icon: 'fa fa-user'
           },
-          
           {
-            title: 'Objetos disponíveis',
+            title: 'Objetos para interação',
             icon: 'fa fa-chart-area',
             attributes: {
               id: "object-group"
@@ -58,14 +57,21 @@ export default {
                 }
               },
               {
-                href: '/form',
+                href: '/video',
+                title: 'Video Player',
+                attributes: {
+                  id: 'videoplayer'
+                }
+              },
+              {
+                href: '/formpage',
                 title: 'Cadastro de Usuário',
                 attributes: {
                   id: 'form-register'
                 }
               },
               {
-                href: '/about',
+                href: '/aboutpage',
                 title: 'Sobre',
                 attributes: {
                   id: 'about'

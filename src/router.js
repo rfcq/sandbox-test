@@ -1,12 +1,13 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
-import MainPage from './components/Home.vue';
+import MainPage from './components/HomePage.vue';
 import TextField from './components/TextField.vue'
 import ComboBox from './components/ComboBox.vue'
 import CheckBox from './components/CheckBox.vue'
 import RadioButton from './components/RadioButton.vue'
-import About from './components/About.vue'
-import Form from './components/Form.vue'
-import RegisterSuccess from './components/RegisterSuccessful.vue'
+import VideoPlayer from './components/VideoPlayer.vue'
+import AboutPage from './components/AboutPage.vue'
+import FormPage from './components/FormPage.vue'
+import SuccessfulRegister from './components/SuccessfulRegister.vue'
 
 const routes = [
     {
@@ -35,19 +36,24 @@ const routes = [
         component: RadioButton
     },
     {
-        path: '/form',
+        path: '/video',
+        name: 'Video Player',
+        component: VideoPlayer
+    },
+    {
+        path: '/formpage',
         name: 'Cadastro',
-        component: Form
+        component: FormPage
     },
     {
-        path: '/registerok',
+        path: '/success',
         name: 'Cadastro com sucesso',
-        component: RegisterSuccess
+        component: SuccessfulRegister
     },
     {
-        path: '/about',
+        path: '/aboutpage',
         name: 'Sobre',
-        component: About
+        component: AboutPage
     }
     
 ];

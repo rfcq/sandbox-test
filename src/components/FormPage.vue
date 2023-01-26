@@ -1,11 +1,11 @@
 <template>
     
-        <form id="app" @submit="checkForm" action="/registerok" method="post">
+        <form id="app" @submit="checkForm">
 
             <p v-if="errors.length">
                 <b>Por favor, corrija o(s) seguinte(s) erro(s):</b>
                 <ul>
-                    <li v-for="error in errors">{{error}}</li>
+                    <li v-for="error in errors" :key="error">{{error}}</li>
                 </ul>
             </p>
 
@@ -19,7 +19,7 @@
                 <input placeholder="Email" type="text" id="email" v-model="email" name="email"/>
             </div>
             <br>
-            <input type="submit" value="Cadastrar" />
+            <button @click="register" type="submit" value="Cadastrar">Cadastrar</button>
         </form>
     
     
@@ -37,6 +37,7 @@
         },
         methods: {
             checkForm(e) {
+                
                 if(this.name && this.email) {
                     return true
                 }
@@ -49,7 +50,10 @@
                     this.errors.push('O email é obrigatório.')
                 }
                 e.preventDefault()
+
             }
-        }
+        },
+        
+
     }
 </script>
